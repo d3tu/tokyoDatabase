@@ -1,0 +1,8 @@
+{
+  "name": "tokyo-db",
+  "version": "1.0.0",
+  "description": "Just a simple Database with TypeScript",
+  "main": "index.ts",
+  "author": "inex1stent",
+  "license": "MIT"
+}
