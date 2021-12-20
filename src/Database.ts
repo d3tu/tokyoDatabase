@@ -14,7 +14,7 @@ export default class Database {
   }
   
   get json(): object {
-    return fs.exitsSync(this.path) ? JSON.parse(fs.readFileSync(this.path, 'utf8')) : {};
+    return fs.existsSync(this.path) ? JSON.parse(fs.readFileSync(this.path, 'utf8')) : {};
   }
   
   set json(obj: object) {
