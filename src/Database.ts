@@ -1,13 +1,24 @@
 import fs from 'fs';
 
+type Key = string | number;
+
 export default class Database {
   path: string;
-  json: any;  
+  
   constructor(path: string) {
     this.path = path;
   }
-  get(add) {
-    this.json = JSON.parse(fs.readFileSync(this.path, { encoding: "utf-8" }))
+  
+  get(key: Key) {
+    return this.json[key];
+  }
+  
+  get json(): object {
+    return fs.exitsSync(this.path) ? JSON.parse(fs.readFileSync(this.path, 'utf8')) : {};
+  }
+  
+  set json(obj: object) {
+    fs.writeFileSync(this.path, JSON.stringify(obj, undefined, 2));
   }
 }
 
