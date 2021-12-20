@@ -1,6 +1,6 @@
 ﻿# tokyoDatabase
 
-## the npm is no published in npmjs.com (just for now)
+## the npm is not published in npmjs.com (just for now)
 
 # install
 
