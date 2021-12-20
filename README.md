@@ -1,11 +1,9 @@
-﻿# tokyoDatabase
-
-## the npm is not published in npmjs.com (just for now)
+﻿# [tokyo-db](https://www.npmjs.com/package/tokyo-db)
 
 # install
 
 ```console
-$ yarn add tokyo-database
+$ yarn add tokyo-db
 # or 
-$ npm i tokyo-database
+$ npm i tokyo-db
 ```
