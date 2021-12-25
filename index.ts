@@ -1,12 +1,10 @@
 import fs from 'fs';
 
-type Key = string | number;
-
-export default class Database {
-  path: string;
+export class Database {
+  constructor(public path: string) {}
   
-  constructor(path: string) {
-    this.path = path;
+  get version() {
+    return require("./package.json").version;
   }
   
   get json(): object {
@@ -16,16 +14,6 @@ export default class Database {
   set json(obj: object) {
     fs.writeFileSync(this.path, JSON.stringify(obj, undefined, 2));
   }
-  
-  get version() {
-    return require("./package.json").version;
-  }
-
-  get name() {
-    return require("./package.json").name;
-  }
-
-  get all() {
-    return this.json;
-  }
 }
+
+export default Database;
